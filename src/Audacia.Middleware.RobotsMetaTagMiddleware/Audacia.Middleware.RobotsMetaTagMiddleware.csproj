@@ -1,15 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <Authors>Jamie Taylor</Authors>
+    <Company>Audacia Consulting</Company>
+    <Product>X-Robots-Meta tag ASP NET Core Middleware</Product>
     <Description>An ASP.NET Core Middleware which adds the X-Robots-Meta HTTP tag.</Description>
-    <VersionPrefix>0.0.1</VersionPrefix>
-    <Authors>Audacia Consulting</Authors>
-    <AssemblyName>Audacia.Middleware.RobotsMetaTag</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Audacia.Middleware.RobotsMetaTag</PackageId>
-    <RuntimeFrameworkVersion>2.0.0</RuntimeFrameworkVersion>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <Version>0.0.1</Version>
+    <FileVersion>0.0.1</FileVersion>
+    <AssemblyName>Audacia.Middleware.RobotsMetaTag</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Audacia.Extensions\Audacia.Extensions.csproj" />

@@ -1,6 +1,5 @@
 # escape=`
-# This image contains the .NET Core SDK
-FROM microsoft/dotnet:2.1-sdk-alpine as builder
+FROM microsoft/dotnet:1-sdk as builder
 
 WORKDIR /build
 
