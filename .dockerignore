@@ -1,0 +1,5 @@
+example/
+.vs/
+.git/
+src/**/bin/
+src/**/obj/
