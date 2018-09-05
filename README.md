@@ -18,7 +18,7 @@ Take a look through the `example` project to see how it is consumed. The followi
    - (link incoming)
 - Add the following two using statements to your `Startup.cs`:
 ``` charp
-using Audacia.Extensions;
+using Audacia.Middleware.Extensions;
 using Audacia.Middleware.Helpers;
 ```
 - Add the following to your `Configure` method:
