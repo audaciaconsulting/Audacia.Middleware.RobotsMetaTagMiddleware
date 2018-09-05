@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 
-namespace Audacia.Extensions
+namespace Audacia.Middleware.Extensions
 {
     public static class HttpContextExtensions
     {

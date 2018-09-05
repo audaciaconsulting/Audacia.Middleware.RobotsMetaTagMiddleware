@@ -1,8 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-using Audacia.Extensions;
+using Audacia.Middleware.Extensions;
 using Audacia.Middleware.Helpers;
+using Audacia.Middleware.Models;
 
 namespace Audacia.Middleware
 {

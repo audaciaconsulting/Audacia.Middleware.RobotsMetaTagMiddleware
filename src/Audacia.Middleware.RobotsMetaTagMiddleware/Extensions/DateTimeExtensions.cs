@@ -1,6 +1,6 @@
 using System;
 
-namespace Audacia.Extensions
+namespace Audacia.Middleware.Extensions
 {
     public static class StringExtensions
     {

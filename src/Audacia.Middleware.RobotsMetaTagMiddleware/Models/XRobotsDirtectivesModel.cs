@@ -1,6 +1,6 @@
 using System;
 using System.Text;
-using Audacia.Extensions;
+using Audacia.Middleware.Extensions;
 
 namespace Audacia.Middleware.Models
 {

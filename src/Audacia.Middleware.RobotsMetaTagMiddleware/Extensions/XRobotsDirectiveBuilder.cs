@@ -1,8 +1,7 @@
 ﻿
 using Audacia.Middleware.Models;
 
-namespace Audacia.Middleware.Extensions
-{
+namespace Audacia.Middleware.Extensions {
 
     public static class XRobotsModelExtensions
     {
