@@ -6,9 +6,9 @@
     <Product>X-Robots-Meta tag ASP NET Core Middleware</Product>
     <Description>An ASP.NET Core Middleware which adds the X-Robots-Meta HTTP tag.</Description>
     <PackageId>Audacia.Middleware.RobotsMetaTag</PackageId>
-    <AssemblyVersion>0.0.2</AssemblyVersion>
-    <Version>0.0.2</Version>
-    <FileVersion>0.0.2</FileVersion>
+    <AssemblyVersion>0.0.3</AssemblyVersion>
+    <Version>0.0.3</Version>
+    <FileVersion>0.0.3</FileVersion>
     <AssemblyName>Audacia.Middleware.RobotsMetaTag</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
