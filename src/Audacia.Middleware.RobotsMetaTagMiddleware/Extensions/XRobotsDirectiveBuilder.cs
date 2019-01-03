@@ -1,18 +1,8 @@
 ﻿
 using Audacia.Middleware.Models;
 
-namespace Audacia.Middleware.Extensions {
-
-    public static class XRobotsModelExtensions
-    {
-        // needs a render method
-        // returns a string of the format
-        // "<BotName value> : <comma separated values (if true, add the name)>"
-        // If (all) return "<botname>: all"
-        // else process all of the others
-        //  if (None) do not add "noindex, nofollow" <- check first
-    }
-
+namespace Audacia.Middleware.Extensions
+{
     public static class XRobotsModelBuilder
     {
         private static XRobotsModel Config;

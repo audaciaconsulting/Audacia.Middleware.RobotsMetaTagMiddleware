@@ -4,13 +4,13 @@ This repo contains an ASP NET Core Middleware item for adding the [X-Robots-Tag 
 
 The header tells all web crawler bots whether they are allowed to index the page that it finds (along with any hyperlinks it finds on the page). This is vital as the robots.txt file can, and often is, ignored by web crawlers.
 
-# Getting Started
+## Getting Started
 
-## Running the Example
+### Running the Example
 
 Included in this repo, there is an `example` directory which contains an example ASP NET Core MVC app which responds to all requests for `/`. The response includes a string array of all HTTP headers added into the generated response.
 
-## Consuming the Middleware
+### Consuming the Middleware
 
 Take a look through the `example` project to see how it is consumed. The following is a TL;DR:
 
@@ -21,9 +21,15 @@ Take a look through the `example` project to see how it is consumed. The followi
 using Audacia.Extensions;
 using Audacia.Middleware.Helpers;
 ```
-- Add the following to your `Configure` method:
+- In your `Configure` method create an instance of the `XRobotsModel` and pass it into the `UseXRobotsMetaTagMiddleware` extension method.
+
+This can be done using one of the two available helper methods to generate helpful defaults:
+
+`CreatePublicFacingLiveSiteDefault()` is used to create a permissive X-Robots-Meta tag (allowing crawling, indexing, archiving, create snippets, offering translation, and indexing all images on the rendered page for all bots). Whereas `CreateDevSiteDefault()` creates a very limiting X-Robots-Meta tag (disallowing crawling, indexing, archiving, create snippets, offering translation, and indexing all images on the rendered page for all bots).
+
 ``` csharp
-app.UseXRobotsMetaTagMiddleware();
+var robotMetaTagConfig = XRobotsModelHelpers.CreateDevSiteDefault();
+app.UseXRobotsMetaTagMiddleware(robotMetaTagConfig);
 ```
 
 ## Note
@@ -36,17 +42,15 @@ X-Robots-Tag: none, noarchive, nosnippet, notranslate, noimageindex
 
 A future version of this middelware will expose a builder which will allow you to create a custom value.
 
----
-
-# Build
+## Build
 
 Building this repo can be done in two different ways; depending on the tools that you have installed, you can choose between the following
 
-## Building with an IDE
+### Building with an IDE
 
 Simply open the `Audacia.Middleware.XRobotsMetaTagMiddleware.sln` with Visual Studio/Visual Studio Code/Rider/etc. and build the solution.
 
-## Building with docker
+### Building with docker
 
 Open a terminal at the root of the repo and issue the following command:
 

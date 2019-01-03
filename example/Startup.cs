@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 using Audacia.Middleware.Extensions;
+using Audacia.Middleware.Helpers;
 
 namespace example
 {
@@ -35,7 +37,8 @@ namespace example
                 app.UseHsts();
             }
 
-            app.UseXRobotsMetaTagMiddleware();
+            var robotMetaTagConfig = XRobotsModelHelpers.CreatePublicFacingLiveSiteDefault();
+            app.UseXRobotsMetaTagMiddleware(robotMetaTagConfig);
 
             app.UseHttpsRedirection();
 

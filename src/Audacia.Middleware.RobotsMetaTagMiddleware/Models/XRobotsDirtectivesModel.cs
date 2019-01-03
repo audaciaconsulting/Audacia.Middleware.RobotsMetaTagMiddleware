@@ -64,7 +64,7 @@ namespace Audacia.Middleware.Models
         /// <value>Default (via parameterless constructor) is null</value>
         public DateTime? UnavailableAfter { get; set; }
 
-        public override string ToString()
+        public string Render()
         {
             if (All)
             {

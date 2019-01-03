@@ -14,10 +14,12 @@ namespace Audacia.Middleware
     public class RobotsMetaTagMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly XRobotsModel _config;
 
-        public RobotsMetaTagMiddleware(RequestDelegate next)
+        public RobotsMetaTagMiddleware(RequestDelegate next, XRobotsModel config)
         {
             _next = next;
+            _config = config;
         }
 
         /// <summary>
@@ -28,9 +30,7 @@ namespace Audacia.Middleware
         /// <returns></returns>
         public async Task Invoke(HttpContext httpContext)
         {
-            var xRobotsModel = XRobotsModelHelpers.CreateAudaciaDefault();
-
-            httpContext.TryAddHeader("X-Robots-Tag", xRobotsModel.ToString());
+            httpContext.TryAddHeader("X-Robots-Tag", _config.Render());
             
             // Call the next middleware in the chain
             await _next.Invoke(httpContext);

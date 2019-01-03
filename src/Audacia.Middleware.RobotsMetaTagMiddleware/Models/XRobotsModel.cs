@@ -20,7 +20,7 @@ namespace Audacia.Middleware.Models
         /// A blank or null value applies to all bots
         /// </summary>
         /// <value>(Default) <see cref="String.Empty" /></value>
-        public string BotName { get; set; }
+        public string BotName { get; set; } = string.Empty;
         
         /// <summary>
         /// The directives to apply for the specified <see cref="BotName"/>
@@ -28,10 +28,10 @@ namespace Audacia.Middleware.Models
         /// <value>(Default) Allow all</value>
         public XRobotsDirectivesModel Directives { get; set; }
 
-        public override string ToString()
+        public string Render()
         {
             return string.IsNullOrWhiteSpace(BotName)
-                ? $"{Directives.ToString()}"
+                ? $"{Directives.Render()}"
                 : $"{BotName : Directives.ToString()}";
         }
     }
