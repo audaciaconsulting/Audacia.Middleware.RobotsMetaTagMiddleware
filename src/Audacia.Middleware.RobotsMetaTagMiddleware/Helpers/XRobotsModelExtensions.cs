@@ -15,6 +15,9 @@ namespace Audacia.Middleware.Helpers
         public static XRobotsModel CreatePublicFacingLiveSiteDefault()
         {
             return XRobotsModelBuilder.CreateBuilder()
+                    .RemoveAll()
+                    .AddNoArchive()
+                    .AddNoSnippet()
                     .AddBotName(string.Empty)   // Apply to all bots
                     .Build();
         }

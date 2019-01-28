@@ -29,57 +29,64 @@ namespace Audacia.Middleware.Extensions
         /// <param name="config"An instance of the <see cref="XRobotsModel" /></param>
         public static XRobotsModel AddNone(this XRobotsModel config)
         {
-            UpdatePrivateConfig(config);
-            RemoveAll();
+            RemoveAll(config);
             Config.Directives.NoIndex = true;
             Config.Directives.NoFollow = true;
+            UpdatePrivateConfig(config);
             return Config;
         }
 
         public static XRobotsModel AddNoIndex(this XRobotsModel config)
         {
-            UpdatePrivateConfig(config);
-            RemoveAll();
+            RemoveAll(config);
             Config.Directives.NoIndex = true;
+            UpdatePrivateConfig(config);
             return Config;
         }
 
         public static XRobotsModel AddNoFollow(this XRobotsModel config)
         {
-            UpdatePrivateConfig(config);
-            RemoveAll();
+            RemoveAll(config);
             Config.Directives.NoFollow = true;
+            UpdatePrivateConfig(config);
             return Config;
         }
 
         public static XRobotsModel AddNoArchive(this XRobotsModel config)
         {
-            UpdatePrivateConfig(config);
             Config.Directives.NoArchive = true;
+            UpdatePrivateConfig(config);
             return Config;
         }
 
         public static XRobotsModel AddNoSnippet(this XRobotsModel config)
         {
-            UpdatePrivateConfig(config);
             Config.Directives.NoSnippet = true;
+            UpdatePrivateConfig(config);
             return Config;
         }
 
         public static XRobotsModel AddNoTranslate(this XRobotsModel config)
         {
-            UpdatePrivateConfig(config);
             Config.Directives.NoTranslate = true;
+            UpdatePrivateConfig(config);
             return Config;
         }
 
         public static XRobotsModel AddNoImageIndex(this XRobotsModel config)
         {
-            UpdatePrivateConfig(config);
             Config.Directives.NoImageIndex = true;
+            UpdatePrivateConfig(config);
             return config;
         }
 
+        public static XRobotsModel RemoveAll(this XRobotsModel config)
+        {
+            config.Directives.All = false;
+            UpdatePrivateConfig(config);
+            return config;
+        }
+        
         public static XRobotsModel Build(this XRobotsModel config)
         {
             UpdatePrivateConfig(config);
@@ -91,9 +98,5 @@ namespace Audacia.Middleware.Extensions
             Config = config;
         }
 
-        private static void RemoveAll()
-        {
-            Config.Directives.All = false;
-        }
     }
 }

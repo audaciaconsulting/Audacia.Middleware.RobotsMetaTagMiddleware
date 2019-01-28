@@ -37,7 +37,10 @@ namespace example
                 app.UseHsts();
             }
 
-            var robotMetaTagConfig = XRobotsModelHelpers.CreatePublicFacingLiveSiteDefault();
+            var robotMetaTagConfig = env.IsProduction()
+                ? XRobotsModelHelpers.CreatePublicFacingLiveSiteDefault()
+                : XRobotsModelHelpers.CreateDevSiteDefault();
+
             app.UseXRobotsMetaTagMiddleware(robotMetaTagConfig);
 
             app.UseHttpsRedirection();
