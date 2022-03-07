@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 
-namespace Audacia.Middleware.Extensions
+namespace Audacia.Middleware.RobotsMetaTagMiddleware.Extensions
 {
     public static class HttpContextExtensions
     {

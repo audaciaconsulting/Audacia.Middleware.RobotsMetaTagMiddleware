@@ -1,15 +1,15 @@
 using System;
 using System.Text;
-using Audacia.Middleware.Extensions;
+using Audacia.Middleware.RobotsMetaTagMiddleware.Extensions;
 
-namespace Audacia.Middleware.Models
+namespace Audacia.Middleware.RobotsMetaTagMiddleware.Models
 {
     public class XRobotsDirectivesModel
     {
         public XRobotsDirectivesModel()
         {
             All = true;
-            UnavailableAfter = default(DateTime?);
+            UnavailableAfter = default;
         }
 
         /// <summary>
@@ -112,10 +112,11 @@ namespace Audacia.Middleware.Models
 
             if (UnavailableAfter.HasValue)
             {
-                builder.Append($"unavailable_after: {UnavailableAfter.ToRfc850Format("GMT")}");
+                builder.Append($"unavailable_after: {UnavailableAfter.ToRfc850Format("GMT")}, ");
             }
 
-            return builder.ToString().RemoveLastInstanceOfChar(',');
+            // Remove the last two characters as the builder will always end with ", "
+            return builder.Remove(builder.Length - 2, 2).ToString();
         }
     }
 }

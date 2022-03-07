@@ -1,4 +1,4 @@
-namespace Audacia.Middleware.Models
+namespace Audacia.Middleware.RobotsMetaTagMiddleware.Models
 {
     public class XRobotsModel
     {
@@ -32,7 +32,7 @@ namespace Audacia.Middleware.Models
         {
             return string.IsNullOrWhiteSpace(BotName)
                 ? $"{Directives.Render()}"
-                : $"{BotName : Directives.ToString()}";
+                : $"{BotName}: {Directives.Render()}";
         }
     }
 }
