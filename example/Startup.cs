@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Audacia.Middleware.RobotsMetaTagMiddleware.Extensions;
+using Audacia.Middleware.RobotsMetaTagMiddleware.Helpers;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-using Audacia.Middleware.Extensions;
-using Audacia.Middleware.Helpers;
+using Microsoft.Extensions.Hosting;
 
 namespace example
 {
@@ -21,11 +20,11 @@ namespace example
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -37,15 +36,16 @@ namespace example
                 app.UseHsts();
             }
 
-            var robotMetaTagConfig = env.IsProduction()
-                ? XRobotsModelHelpers.CreatePublicFacingLiveSiteDefault()
-                : XRobotsModelHelpers.CreateDevSiteDefault();
-
-            app.UseXRobotsMetaTagMiddleware(robotMetaTagConfig);
+            if (!env.IsProduction())
+            {
+                app.UseXRobotsMetaTagMiddleware(XRobotsModelBuilder.CreatePrivateAppDefault().Build());
+            }
 
             app.UseHttpsRedirection();
 
-            app.UseMvc();
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }
 }

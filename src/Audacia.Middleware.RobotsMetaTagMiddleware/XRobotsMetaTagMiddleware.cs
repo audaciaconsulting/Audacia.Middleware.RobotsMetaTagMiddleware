@@ -1,22 +1,20 @@
 ﻿using System.Threading.Tasks;
+using Audacia.Middleware.RobotsMetaTagMiddleware.Extensions;
+using Audacia.Middleware.RobotsMetaTagMiddleware.Models;
 using Microsoft.AspNetCore.Http;
 
-using Audacia.Middleware.Extensions;
-using Audacia.Middleware.Helpers;
-using Audacia.Middleware.Models;
-
-namespace Audacia.Middleware
+namespace Audacia.Middleware.RobotsMetaTagMiddleware
 {
     /// <summary>
     /// A middleware for injecting OWASP recommended headers into a
     /// HTTP Request
     /// </summary>
-    public class RobotsMetaTagMiddleware
+    public class XRobotsMetaTagMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly XRobotsModel _config;
 
-        public RobotsMetaTagMiddleware(RequestDelegate next, XRobotsModel config)
+        public XRobotsMetaTagMiddleware(RequestDelegate next, XRobotsModel config)
         {
             _next = next;
             _config = config;
