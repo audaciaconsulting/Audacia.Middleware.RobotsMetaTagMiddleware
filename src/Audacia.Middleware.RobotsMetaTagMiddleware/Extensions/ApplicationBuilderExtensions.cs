@@ -5,7 +5,7 @@ namespace Audacia.Middleware.RobotsMetaTagMiddleware.Extensions
 {
     public static class ApplicationBuilderExtensions
     {
-        public static IApplicationBuilder UseXRobotsMetaTagMiddleware(this IApplicationBuilder builder, XRobotsModel config)
+        public static IApplicationBuilder UseXRobotsMetaTagHeader(this IApplicationBuilder builder, XRobotsModel config)
         {
             return builder.UseMiddleware<XRobotsMetaTagMiddleware>(config);
         }

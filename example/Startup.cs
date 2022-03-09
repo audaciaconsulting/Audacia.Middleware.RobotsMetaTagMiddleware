@@ -38,7 +38,7 @@ namespace example
 
             if (!env.IsProduction())
             {
-                app.UseXRobotsMetaTagMiddleware(XRobotsModelBuilder.CreatePrivateAppDefault().Build());
+                app.UseXRobotsMetaTagHeader(XRobotsModelBuilder.CreatePrivateAppDefault().Build());
             }
 
             app.UseHttpsRedirection();
