@@ -2,9 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <Authors>Audacia</Authors>
+    <Description>Test for ASP.NET Core Middleware and adding X-Robots-Meta HTTP tags.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageIcon>package-icon.png</PackageIcon>
     <Nullable>enable</Nullable>
-
     <IsPackable>false</IsPackable>
+    <Version>1.1.0</Version>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +29,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Audacia.Middleware.RobotsMetaTagMiddleware\Audacia.Middleware.RobotsMetaTagMiddleware.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../package-icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
