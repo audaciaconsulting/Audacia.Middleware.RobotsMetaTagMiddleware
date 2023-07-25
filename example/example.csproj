@@ -2,11 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Authors>Audacia</Authors>
-    <Description>Example app for implementing Audacia.Middleware.RobotsMetaTagMiddleware.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageIcon>package-icon.png</PackageIcon>
+	<IsPackable>false</IsPackable>
     <Version>1.1.0</Version>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
