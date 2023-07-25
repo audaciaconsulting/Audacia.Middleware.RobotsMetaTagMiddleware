@@ -5,14 +5,21 @@
     <Company>Audacia Consulting</Company>
     <Product>X-Robots-Meta tag ASP NET Core Middleware</Product>
     <Description>An ASP.NET Core Middleware which adds the X-Robots-Meta HTTP tag.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>Audacia.Middleware.RobotsMetaTag</PackageId>
+    <PackageIcon>package-icon.png</PackageIcon>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <Version>1.0.0</Version>
-    <FileVersion>1.0.0</FileVersion>
+    <Version>1.1.0</Version>
+    <FileVersion>1.1.0</FileVersion>
     <AssemblyName>Audacia.Middleware.RobotsMetaTag</AssemblyName>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="../../package-icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>

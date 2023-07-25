@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 This repo contains an ASP.NET Core Middleware for adding the [X-Robots-Tag HTTP header](https://developers.google.com/search/reference/robots_meta_tag).
 
@@ -20,3 +20,6 @@ For example, using the private app default directives looks like this:
 ``` csharp
 app.UseXRobotsMetaTagMiddleware(XRobotsModelBuilder.CreatePrivateAppDefault().Build());
 ```
+
+# Contributing
+We welcome contributions! Please feel free to check our [Contribution Guidlines](https://github.com/audaciaconsulting/.github/blob/main/CONTRIBUTING.md) for feature requests, issue reporting and guidelines.
