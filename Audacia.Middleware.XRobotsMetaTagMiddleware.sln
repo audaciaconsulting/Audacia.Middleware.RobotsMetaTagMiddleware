@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9DE7C672-AB52-43DE-B548-AED7EA3096DB}"
+	ProjectSection(SolutionItems) = preProject
+		src\editor.config = src\editor.config
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Audacia.Middleware.RobotsMetaTagMiddleware", "src\Audacia.Middleware.RobotsMetaTagMiddleware\Audacia.Middleware.RobotsMetaTagMiddleware.csproj", "{62E297AB-7AE6-42C1-8F58-542842001EB3}"
 EndProject
@@ -13,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "example", "example\example.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{873CC007-E3FD-4E5B-B9A8-F740048897BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audacia.Middleware.RobotsMetaTagMiddleware.Tests", "tests\Audacia.Middleware.RobotsMetaTagMiddleware.Tests\Audacia.Middleware.RobotsMetaTagMiddleware.Tests.csproj", "{7C26A76F-C146-456A-96AD-7520CE7F380F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Audacia.Middleware.RobotsMetaTagMiddleware.Tests", "tests\Audacia.Middleware.RobotsMetaTagMiddleware.Tests\Audacia.Middleware.RobotsMetaTagMiddleware.Tests.csproj", "{7C26A76F-C146-456A-96AD-7520CE7F380F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
