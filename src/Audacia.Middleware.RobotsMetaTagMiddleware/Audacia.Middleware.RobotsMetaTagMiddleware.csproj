@@ -10,7 +10,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>Audacia.Middleware.RobotsMetaTagMiddleware</PackageId>
     <PackageIcon>package-icon.png</PackageIcon>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <AssemblyName>Audacia.Middleware.RobotsMetaTagMiddleware</AssemblyName>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Nullable>enable</Nullable>
