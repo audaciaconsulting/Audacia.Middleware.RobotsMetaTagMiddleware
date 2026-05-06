@@ -10,7 +10,7 @@
 - Changed the example app to apply the headers in any development environment.
 - Replaced `FluentAssertions` with `Shouldly`.
 - Upgraded all NuGet package dependencies.
-- Changed example app to use `Host.CreateDefaultBuilder`
+- Changed example app to use `Host.CreateDefaultBuilder`.
 
 ### Removed
 - No functionality removed.
