@@ -9,7 +9,7 @@
     <PackageIcon>package-icon.png</PackageIcon>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
-    <Version>1.1.0</Version>
+    <Version>1.1.2</Version>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
