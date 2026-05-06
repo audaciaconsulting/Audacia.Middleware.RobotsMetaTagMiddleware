@@ -1,6 +1,6 @@
 using System;
 using Audacia.Middleware.RobotsMetaTagMiddleware.Helpers;
-using FluentAssertions;
+using Shouldly;
 using Xunit;
 
 namespace Audacia.Middleware.RobotsMetaTagMiddleware.Tests;
@@ -14,7 +14,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("none");
+        output.ShouldContain("none");
     }
 
     [Fact]
@@ -24,7 +24,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("noarchive");
+        output.ShouldContain("noarchive");
     }
 
     [Fact]
@@ -34,7 +34,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("nosnippet");
+        output.ShouldContain("nosnippet");
     }
 
     [Fact]
@@ -44,7 +44,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("notranslate");
+        output.ShouldContain("notranslate");
     }
 
     [Fact]
@@ -54,7 +54,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("noimageindex");
+        output.ShouldContain("noimageindex");
     }
 
     [Fact]
@@ -65,7 +65,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("unavailable_after: 04 Mar 2022 15:56:52 GMT");
+        output.ShouldContain("unavailable_after: 04 Mar 2022 15:56:52 GMT");
     }
 
     [Fact]
@@ -75,7 +75,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("googlebot:");
+        output.ShouldContain("googlebot:");
     }
 
     [Fact]
@@ -85,7 +85,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().Contain("none");
+        output.ShouldContain("none");
     }
 
     [Fact]
@@ -95,7 +95,7 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().EndWith("noimageindex");
+        output.ShouldEndWith("noimageindex");
     }
 
     [Fact]
@@ -106,6 +106,6 @@ public class XRobotsModelDefaultsTests
 
         var output = model.Render();
 
-        output.Should().EndWith("unavailable_after: 04 Mar 2022 15:56:52 GMT");
+        output.ShouldEndWith("unavailable_after: 04 Mar 2022 15:56:52 GMT");
     }
 }
