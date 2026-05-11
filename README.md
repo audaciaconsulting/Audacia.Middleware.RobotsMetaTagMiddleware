@@ -21,9 +21,5 @@ For example, using the private app default directives looks like this:
 app.UseXRobotsMetaTagMiddleware(XRobotsModelBuilder.CreatePrivateAppDefault().Build());
 ```
 
-# Change History
-The `Audacia.Middleware.RobotsMetaTagMiddleware` repository change history can be found in this [changelog](./CHANGELOG.md):
-
-
 # Contributing
 We welcome contributions! Please feel free to check our [Contribution Guidlines](https://github.com/audaciaconsulting/.github/blob/main/CONTRIBUTING.md) for feature requests, issue reporting and guidelines.

@@ -11,6 +11,7 @@
 - Replaced `FluentAssertions` with `Shouldly`.
 - Upgraded all NuGet package dependencies.
 - Changed example app to use `Host.CreateDefaultBuilder`.
+- Removed the CHANGELOG reference from the README.
 
 ### Removed
 - No functionality removed.
