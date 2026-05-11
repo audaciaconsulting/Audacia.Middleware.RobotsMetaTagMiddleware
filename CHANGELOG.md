@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.1.3 - 2026-05-06
+### Added
+- No functionality added.
+
+### Changed
+- Upgraded example app and tests project to dotnet 10.
+- Changed dotnet 10 projects to use file-scoped namespaces.
+- Changed the example app to apply the headers in any development environment.
+- Replaced `FluentAssertions` with `Shouldly`.
+- Upgraded all NuGet package dependencies.
+- Changed example app to use `Host.CreateDefaultBuilder`.
+- Removed the CHANGELOG reference from the README.
+
+### Removed
+- No functionality removed.
+
 ## 1.1.2 - 2024-11-20
 ### Added
 - No new functionality added

@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 
 namespace Audacia.Middleware.RobotsMetaTagMiddleware.Extensions
@@ -23,7 +24,7 @@ namespace Audacia.Middleware.RobotsMetaTagMiddleware.Extensions
         ///     Monday, 15th of August 2018 at 15:52:01.
         /// </returns>
         /// <exception cref="ArgumentException"><paramref name="dateTime"/> is null.</exception>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "AV1704:Identifier contains one or more digits in its name", Justification = "Name defines the Datetime format.")]
+        [SuppressMessage("Naming", "AV1704:Identifier contains one or more digits in its name", Justification = "Name defines the Datetime format.")]
         public static string ToRfc850Format(this DateTime? dateTime, string timeZoneKey = "GMT")
         {
             if (dateTime == null)
@@ -48,7 +49,7 @@ namespace Audacia.Middleware.RobotsMetaTagMiddleware.Extensions
         /// for the given Date and Time:
         ///     Monday, 15th of August 2018 at 15:52:01.
         /// </returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "AV1704:Identifier contains one or more digits in its name", Justification = "Name defines the Datetime format.")]
+        [SuppressMessage("Naming", "AV1704:Identifier contains one or more digits in its name", Justification = "Name defines the Datetime format.")]
         public static string ToRfc850Format(this DateTime dateTime, string timeZoneKey = "GMT")
         {
             return $"{dateTime.ToString($"dd MMM yyyy HH:mm:ss", CultureInfo.InvariantCulture)} {timeZoneKey}";
