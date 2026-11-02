@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.5 - 2026-11-02
+
+### Added
+
+- No functionality added.
+
+### Changed
+
+- Updated System.Text.Encodings.Web dependency to version 10.0.14.
+
 ## 1.1.4 - 2026-10-30
 
 ### Added
