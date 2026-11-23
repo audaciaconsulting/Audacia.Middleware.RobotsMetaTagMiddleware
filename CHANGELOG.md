@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.6 - 2026-11-23
+
+### Changed
+
+- Updated Microsoft.AspNetCore.Http.Abstractions to version 2.3.14.
+- Updated System.Text.Encodings.Web to version 10.0.15.
+
 ## 1.1.5 - 2026-11-02
 
 ### Added
